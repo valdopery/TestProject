@@ -7,10 +7,10 @@ pipeline {
 	        MAJOR = '1'
 	        MINOR = '0'
 	        //Orchestrator Services
-	        UIPATH_ORCH_URL = "https://drpa002zafswi.vodacom.corp/"
-	        UIPATH_ORCH_LOGICAL_NAME = "anupaminc"
-	        UIPATH_ORCH_TENANT_NAME = "Mozambique_QA"
-	        UIPATH_ORCH_FOLDER_NAME = "Mozambique"
+	        UIPATH_ORCH_URL = "https://cloud.uipath.com/"
+	        UIPATH_ORCH_LOGICAL_NAME = "valdo_home"
+	        UIPATH_ORCH_TENANT_NAME = "defaultTenant"
+	        UIPATH_ORCH_FOLDER_NAME = "Moz"
 	    }
 	
 
@@ -62,9 +62,9 @@ pipeline {
 	                orchestratorAddress: "${UIPATH_ORCH_URL}",
 	                orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
 	                folderName: "${UIPATH_ORCH_FOLDER_NAME}",
-	                environments: 'DEV',
+	                //environments: 'DEV',
 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'), 
+	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'VicTX77JdsHhVvIHoPadhNyOHyL19rxLh76aaTFp0G7xC'), 
 					traceLevel: 'None',
 					entryPointPaths: 'Main.xaml'
 	
